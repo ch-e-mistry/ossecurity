@@ -1,6 +1,7 @@
 ---
 - name: "OS Hardening"
   hosts: localhost
+  become: true
   vars_prompt:
   - name: user_input_options
     prompt: "Which linux server do you want to deploy?\n
@@ -8,6 +9,7 @@
       2 - UbuntuOS \n
       3 - SuseOS \n
       4 - Security Report Generation \n
+      5 - Amazon Linux \n
       please Enter number"
     private: no
   roles:
